@@ -21,6 +21,7 @@ entity Authors : managed {
 /** Hierarchically organized Code List for Genres */
 entity Genres : sap.common.CodeList { 
   key ID   : Integer;
+  name : String(100);
   parent   : Association to Genres;
   children : Composition of many Genres on children.parent = $self;
 }
